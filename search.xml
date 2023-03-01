@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>一键部署hexo静态博客到github pages</title>
+      <link href="2023/03/01/hexo-deploy/"/>
+      <url>2023/03/01/hexo-deploy/</url>
+      
+        <content type="html"><![CDATA[<h2 id="github-仓库"><a href="#github-仓库" class="headerlink" title="github 仓库"></a>github 仓库</h2><p>建立名为 username.github.io 的储存库，username 是你在 GitHub 上的用户名，若之前已将 Hexo 上传至其他储存库，将该储存库重命名即可。<br>例如 username=joe，则 <a href="https://github.com/joe/joe.github.io">https://github.com/joe/joe.github.io</a></p><h2 id="hexo项目页面"><a href="#hexo项目页面" class="headerlink" title="hexo项目页面"></a>hexo项目页面</h2><ol><li>安装 hexo-deployer-git。</li><li>修改项目中_config.yml为如下：<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">https://github.com/&lt;username&gt;/&lt;project&gt;</span> <span class="comment">#例如  https://github.com/joe/joe.github.io</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">main</span> <span class="comment">#旧仓库默认master，新的默认是main</span></span><br><span class="line"></span><br></pre></td></tr></table></figure></li><li>执行 hexo clean &amp;&amp; hexo deploy</li><li>访问 <a href="https://joe.github.io.github.io/">https://joe.github.io.github.io/</a> 是否正常</li></ol><p><strong><font color=red>注意问题</font></strong></p><ul><li>如果使用SSHKey部署则需要提前将hexo项目所在机器的SSHKEY.PUB 添加到 <a href="https://github.com/settings/keys">https://github.com/settings/keys</a> 的 SSH keys 配置，<a href="https://blog.csdn.net/u013778905/article/details/83501204">参考地址</a></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> hexo </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> hexo-deploy </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>事件的节流（throttle）与防抖（debounce）</title>
       <link href="2021/12/14/throttle-debounce/"/>
       <url>2021/12/14/throttle-debounce/</url>
