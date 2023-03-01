@@ -1,0 +1,286 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>前端彼岸</title><meta name="keywords" content="JavaScript,typescript,vue,vue-router,vuex,axios,react,react-router,react-reudx,mobx"><meta name="author" content="Joe"><meta name="copyright" content="Joe"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><meta property="og:type" content="website">
+<meta property="og:title" content="前端彼岸">
+<meta property="og:url" content="http://zhuowenzhou.com/page/2/index.html">
+<meta property="og:site_name" content="前端彼岸">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://fpr.motaobox.com/412326488083378067">
+<meta property="article:author" content="Joe">
+<meta property="article:tag" content="JavaScript,typescript,vue,vue-router,vuex,axios,react,react-router,react-reudx,mobx">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://fpr.motaobox.com/412326488083378067"><link rel="shortcut icon" href="/img/favicon.ico"><link rel="canonical" href="http://zhuowenzhou.com/page/2/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+};
+
+var saveToLocal = {
+  set: function setWithExpiry(key, value, ttl) {
+    const now = new Date()
+    const expiryDay = ttl * 86400000
+    const item = {
+      value: value,
+      expiry: now.getTime() + expiryDay,
+    }
+    localStorage.setItem(key, JSON.stringify(item))
+  },
+
+  get: function getWithExpiry(key) {
+    const itemStr = localStorage.getItem(key)
+
+    if (!itemStr) {
+      return undefined
+    }
+    const item = JSON.parse(itemStr)
+    const now = new Date()
+
+    if (now.getTime() > item.expiry) {
+      localStorage.removeItem(key)
+      return undefined
+    }
+    return item.value
+  }
+}
+
+// https://stackoverflow.com/questions/16839698/jquery-getscript-alternative-in-native-javascript
+const getScript = url => new Promise((resolve, reject) => {
+  const script = document.createElement('script')
+  script.src = url
+  script.async = true
+  script.onerror = reject
+  script.onload = script.onreadystatechange = function() {
+    const loadState = this.readyState
+    if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+    script.onload = script.onreadystatechange = null
+    resolve()
+  }
+  document.head.appendChild(script)
+})</script><script id="config_change">var GLOBAL_CONFIG_SITE = { 
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2023-03-01 17:27:09'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(function () {  window.activateDarkMode = function () {
+    document.documentElement.setAttribute('data-theme', 'dark')
+    if (document.querySelector('meta[name="theme-color"]') !== null) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+    }
+  }
+  window.activateLightMode = function () {
+    document.documentElement.setAttribute('data-theme', 'light')
+   if (document.querySelector('meta[name="theme-color"]') !== null) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+    }
+  }
+  const autoChangeMode = 'false'
+  const t = saveToLocal.get('theme')
+  if (autoChangeMode === '1') {
+    const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+    const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+    const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+    const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+    if (t === undefined) {
+      if (isLightMode) activateLightMode()
+      else if (isDarkMode) activateDarkMode()
+      else if (isNotSpecified || hasNoSupport) {
+        const now = new Date()
+        const hour = now.getHours()
+        const isNight = hour <= 6 || hour >= 18
+        isNight ? activateDarkMode() : activateLightMode()
+      }
+      window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+        if (saveToLocal.get('theme') === undefined) {
+          e.matches ? activateDarkMode() : activateLightMode()
+        }
+      })
+    } else if (t === 'light') activateLightMode()
+    else activateDarkMode()
+  } else if (autoChangeMode === '2') {
+    const now = new Date()
+    const hour = now.getHours()
+    const isNight = hour <= 6 || hour >= 18
+    if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+    else if (t === 'light') activateLightMode()
+    else activateDarkMode()
+  } else {
+    if (t === 'dark') activateDarkMode()
+    else if (t === 'light') activateLightMode()
+  }const asideStatus = saveToLocal.get('aside-status')
+if (asideStatus !== undefined) {
+   if (asideStatus === 'hide') {
+     document.documentElement.classList.add('hide-aside')
+   } else {
+     document.documentElement.classList.remove('hide-aside')
+   }
+}})()</script><meta name="generator" content="Hexo 5.4.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" src="https://fpr.motaobox.com/412326488083378067" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">22</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">9</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">9</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 文章</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fa fa-list"></i><span> 列表</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fa fa-music"></i><span> 音乐</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fa fa-film"></i><span> 电影</span></a></li></ul></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background-image: url(https://fpr.motaobox.com/412326664231506505)"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">前端彼岸</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 文章</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fa fa-list"></i><span> 列表</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fa fa-music"></i><span> 音乐</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fa fa-film"></i><span> 电影</span></a></li></ul></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">前端彼岸</h1><div id="site-subtitle"><span id="subtitle"></span></div><div id="site_social_icons"><a class="social-icon" href="https://github.com/zhuowenzhou" target="_blank" title=""><i class="fa fa-github"></i></a><a class="social-icon" href="mailto:zhuowenzhou@aliyun.com" target="_blank" title=""><i class="fa fa-envelope"></i></a><a class="social-icon" href="/atom.xml" target="_blank" title=""><i class="fa fa-rss"></i></a></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2021/04/22/css-rem-vw/" title="移动端动态设置html的font-size">     <img class="post_bg" src="https://fpr.motaobox.com/412505514770569601" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="移动端动态设置html的font-size"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/04/22/css-rem-vw/" title="移动端动态设置html的font-size">移动端动态设置html的font-size</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-04-22T08:32:44.000Z" title="发表于 2021-04-22 16:32:44">2021-04-22</time></span></div><div class="content">背景由于移动端的终端例如手机有各种各种的分辨率，导致一套设计稿要适应多种屏幕。
+解决方案
+不考虑兼容性的话直接vw处理
+123html &#123;    font-size: calc(100vw / 7.5)&#125;
+这里解释一下代码“100vw”等于屏幕的宽度。相当于把屏幕分成了100份，每份是1vw。至于7.5的原因为是我们想得到1rem = 100px。那么按照设计稿是750px来说 1rem = 100px = 750px/7.5。这样我们就得到了设计稿为750px同时html的fontSize=100px的场景。然后设计稿里面的所有数值 XXXpx = XXX/100 rem，用于方便我们的运算
+
+js动态计算出font-size
+12345678910111213141516171819202122(function (doc, win) &#123;  let docEl = doc.documentElement;  let resizeEvt = &#x27;orientationchange&#x27; in window ? &#x27;orientati ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2021/04/20/csscomb-preset/" title="csscomb-preset">     <img class="post_bg" src="https://fpr.motaobox.com/412326111509492812" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="csscomb-preset"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/04/20/csscomb-preset/" title="csscomb-preset">csscomb-preset</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-04-20T06:43:28.000Z" title="发表于 2021-04-20 14:43:28">2021-04-20</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/%E5%89%8D%E7%AB%AF%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B7%A5%E5%85%B7/">前端自动化工具</a></span></div><div class="content">css格式化神奇，主要格式化css属性顺序，一份配置，到处使用。
+废话不说，直接上csscomb-preset 配置 参考地址
+1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283848586878889909192939495969798991001011021031041051061071081091101111121131141151161171181191201211221231241251261271281291301311321331341351361371381391401411421431441451461471481491501511521531541551561571581591601611621631641651661671681691701711721731741751761771781791801811 ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2021/02/25/wechat-sdk/" title="微信sdk封装调用(适配andriod，IOS)">     <img class="post_bg" src="https://fpr.motaobox.com/407660594768699960" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="微信sdk封装调用(适配andriod，IOS)"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/02/25/wechat-sdk/" title="微信sdk封装调用(适配andriod，IOS)">微信sdk封装调用(适配andriod，IOS)</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-02-25T06:05:17.000Z" title="发表于 2021-02-25 14:05:17">2021-02-25</time></span></div><div class="content">微信分享sdk调用微信sdk调用参考官网文档就够了，不过有些坑点必须说下，针对SPA的app。
+
+安卓必须每次url变化的时候签名
+IOS只能在落地页签名，落地页指的是第一次进入app的url。以后切换路由的时候不需要，也不能重新签名。
+当前页面只能签名一次，多次签名也是不行的。
+
+SDK 文件
+123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899100101102103104105106107108109110111112113114115116117118119120121122123124125126127128129130131132133134135136137138139140141142143144145146147148149150151152153 ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2021/01/23/mini-program-swiper-by-3d/" title="微信小程序3D轮播">     <img class="post_bg" src="https://fpr.motaobox.com/407660341902437223" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="微信小程序3D轮播"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/01/23/mini-program-swiper-by-3d/" title="微信小程序3D轮播">微信小程序3D轮播</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-01-23T01:16:15.000Z" title="发表于 2021-01-23 09:16:15">2021-01-23</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/Swiper/">Swiper</a></span></div><div class="content">微信小程序原生Swiper组件实现的3d轮播效果，废话不说，直接上效果
+
+实现关键点
+设置前后留白 previous-margin=”50px” next-margin=”50px”
+设置3d缩放  当前显示的图片transform: scale(1);其他图片transform: scale(0.86);
+图片宽高比50%  图片容器height: 0;padding-top: 50%; /宽高比50%/， 然后图片  position:absolute;left:0;top:0;width:100%;height: 100%;
+
+123456789101112&lt;view class=&quot;swiper-container&quot;&gt;  &lt;swiper previous-margin=&quot;50px&quot; next-margin=&quot;50px&quot; indicator-dots=&quot;&#123;&#123;indicatorDots&#125;&#125;&quot; circular class=&quot;banner- ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2021/01/20/css-z-index/" title="探索css中的z-index的原理">     <img class="post_bg" src="https://fpr.motaobox.com/407660294594930874" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="探索css中的z-index的原理"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/01/20/css-z-index/" title="探索css中的z-index的原理">探索css中的z-index的原理</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-01-20T08:50:18.000Z" title="发表于 2021-01-20 16:50:18">2021-01-20</time></span></div><div class="content">很多人经常使用z-index属性，大部分的人或许只知道是垂直于屏幕的一条线，并且值越大层级越高。但实际使用过程中，还是会碰到各种各种不可思议的坑。例如设了没效果？有效果但覆盖的顺序不对？如果你也有这方面的疑问就一起来看看吧。
+z-index生效的条件不是所有设置了z-index值的容器就一定有效果，必须是设置了position:relative/absolute/fixed/sticky。
+
+  See the Pen 
+  gOwEjdr by Joe (@JoeZhuo)
+  on CodePen.
+
+
+
+从上面的demo可以看出，设置非static之外的定位才能使z-index生效。同时如果只是设置了定位但没有设置z-index，z-index默认为auto。
+z-index值当设置了定位之后，z-index默认值为auto。同时z-index可以是正整数，负整数，零，auto等值。
+z-index值比较只有2个原则
+
+后来居上 —如果没有显示声明大小的，后来的元素会优先覆盖前面的元素
+谁大谁上 —z-index值大的覆盖小的
+
+层叠水平stacking level
+层叠上下文层 ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2021/01/19/git-hooks-husky-nodejs/" title="使用Husky &amp; Nodejs自定义你的Git钩子">     <img class="post_bg" src="https://fpr.motaobox.com/404469069380297362" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="使用Husky &amp; Nodejs自定义你的Git钩子"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/01/19/git-hooks-husky-nodejs/" title="使用Husky &amp; Nodejs自定义你的Git钩子">使用Husky &amp; Nodejs自定义你的Git钩子</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-01-19T07:48:46.000Z" title="发表于 2021-01-19 15:48:46">2021-01-19</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/git/">git</a></span></div><div class="content">背景就是所谓产生需求的场景有时我们需要使用hooks对git的各类操作进行控制，就有了所谓的钩子（hooks）。然后有个问题是hooks只会存在于本地不会推送到远程仓库，导致无法团队间共享，维护是个大问题。因此 Husky 应运而生。
+准备工作初始化git
+1git init      
+
+初始化package.json
+1npm init --y   
+安装husk@3
+1npm install --save-dev husky@3
+
+修改package.json123456789101112131415161718&#123;  &quot;name&quot;: &quot;git-hooks-demo&quot;,  &quot;version&quot;: &quot;1.0.0&quot;,  &quot;description&quot;: &quot;&quot;,  &quot;main&quot;: &quot;index.js&quot;,  &quot;keywords&quot;: [],  &quot;author&quot;: &quot;&quot;,  ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2021/01/14/ignoreMulti/" title="解决javascript按钮多次重复点击">     <img class="post_bg" src="https://fpr.motaobox.com/404114861203242006" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="解决javascript按钮多次重复点击"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/01/14/ignoreMulti/" title="解决javascript按钮多次重复点击">解决javascript按钮多次重复点击</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-01-14T08:44:48.000Z" title="发表于 2021-01-14 16:44:48">2021-01-14</time></span></div><div class="content">在开发的过程中，我们经常会碰到一个问题，按钮疯狂点击，节流或者防抖其实解决不了这类问题，所有才有了下面这个方法，亲测可用参考地址
+1234567891011121314151617/** * 忽略重复事件函数 参考地址：https://lequ7.com/guan-yu-qian-duan-you-ya-jie-jue-an-niu-chong-fu-dian-ji-wen-ti.html * @param &#123;执行函数&#125; func  * @param &#123;是否自动解锁，true为手动，false为自动&#125; manual  */const ignoreMulti = (func, manual = false) =&gt; &#123;  let lock = false;  return function (...args) &#123;    if (lock) return;    lock = true;    let done = () =&gt; (lock = false);    if (manual) return func.call ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2021/01/14/vue-less-variables/" title="vue-less-variables">     <img class="post_bg" src="https://fpr.motaobox.com/404037304690784225" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="vue-less-variables"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/01/14/vue-less-variables/" title="vue-less-variables">vue-less-variables</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-01-14T08:10:41.000Z" title="发表于 2021-01-14 16:10:41">2021-01-14</time></span></div><div class="content">vue项目中引入less的全局变量项目根目录执行命令
+1vue add style-resources-loader
+vue.config.js
+1234567891011const path = require(&#x27;path&#x27;);module.exports = &#123;    pluginOptions: &#123;        &#x27;style-resources-loader&#x27;: &#123;            preProcessor: &#x27;less&#x27;,            patterns: [                path.resolve(__dirname, &#x27;./src/assets/styles/variables.less&#x27;),                path.resolve(__dirname, &#x27;./src/assets/styles/global.less&#x27;)]        &#125;    &#125;&#125;
+
+variab ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2020/08/11/regex/" title="正则快速入门">     <img class="post_bg" src="https://fpr.motaobox.com/403842807672049074" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="正则快速入门"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/08/11/regex/" title="正则快速入门">正则快速入门</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-08-11T09:04:23.000Z" title="发表于 2020-08-11 17:04:23">2020-08-11</time></span></div><div class="content">何为正则，干嘛用的概念正则表达式是对字符串操作的一种匹配模式，它由字符和元字符组成，然后对目标字符串进行匹配。
+匹配
+匹配什么？ 匹配目标字符串中对应的字符和位置。
+匹配了能做什么？
+校验：也是我们最常用到的，匹配到则存在。
+提取：当匹配到对应的字符时，可以将其提取出来以作他用。
+替换：当匹配到对应的字符时，可以将其替换为指定的字符(例如：使用 replace 方法)，以此实现增删改功能。
+
+
+
+总结正则表达式是由字符和元字符组成的表达式，它能对目标字符串里的字符和位置进行匹配，并能对其进行校验，提取和替换。
+正则入门咯推荐个正则的可视化网站 https://jex.im/regulex，后续 demo 以 js 方式编写。
+创建正则
+字面量
+
+1const regex = /zhuowenzhou/;
+
+
+构造函数
+
+1const regex = new RegExp(&quot;zhuowenzhou&quot;);
+
+上面两种写法是等价的.它们的主要区别是，第一种方法是在编译时创建正则表达式，第二种方法则是在运行时创建正则表达式。
+注意：个人推荐第一种，简单粗暴不用考虑转移，直观 ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2020/08/11/vim/" title="vim 快速入门">     <img class="post_bg" src="https://fpr.motaobox.com/403842767521611416" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="vim 快速入门"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/08/11/vim/" title="vim 快速入门">vim 快速入门</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-08-11T03:43:41.000Z" title="发表于 2020-08-11 11:43:41">2020-08-11</time></span></div><div class="content">VIM 模式
+Normal mode(common mode，以下簡稱 c-mode)：您一進入 VIM 就是處於 c-mode，只能下按鍵指令，不能輸入文字。這些指令可能是游標移動的指令，也可能是編輯指令或尋找替換指令。
+Insert mode(i-mode)：按 i 就會進入 i-mode，此時才可以鍵入文字，寫您的文章，按 Esc 又會回到 c-mode。
+Ed mode(common-line mode，e-mode)：按冒號：(別忘了 Shift 鍵)就會進入 e-mode，左下角會有一個冒號：出現可下 ed 指令。也是按 Esc 回 c-mode。反正正常狀態都是處於 c-mode，這樣才不會把您辛苦打字的文章給隨便搞亂掉。
+
+操作文件
+打开文件
+
+1vim demo.txt
+
+该模式下，如果存在文件则编辑文件，否则新增一个“demo.txt”的文件
+
+编辑文件进入 vim 后，键盘键入“i”则进入“i-mode”模式。游标由方向键控制。通过 del 键可以删除字符
+
+存档离开编辑好文件后，输入“Esc”离开回到“c-mode”模式。“:w”写入文件，但不会离开 vim。“ ...</div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-info-avatar is-center"><img class="avatar-img" src="https://fpr.motaobox.com/412326488083378067" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">Joe</div><div class="author-info__description"></div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">22</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">9</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">9</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/zhuowenzhou"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/zhuowenzhou" target="_blank" title=""><i class="fa fa-github"></i></a><a class="social-icon" href="mailto:zhuowenzhou@aliyun.com" target="_blank" title=""><i class="fa fa-envelope"></i></a><a class="social-icon" href="/atom.xml" target="_blank" title=""><i class="fa fa-rss"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">前端彼岸，希望你也能找到自己的彼岸。</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2021/12/14/throttle-debounce/" title="事件的节流（throttle）与防抖（debounce）"><img src="https://fpr.motaobox.com/404106779140908337" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="事件的节流（throttle）与防抖（debounce）"/></a><div class="content"><a class="title" href="/2021/12/14/throttle-debounce/" title="事件的节流（throttle）与防抖（debounce）">事件的节流（throttle）与防抖（debounce）</a><time datetime="2021-12-14T13:54:36.288Z" title="发表于 2021-12-14 21:54:36">2021-12-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/12/14/vscode-setting-backup/" title="VSCode 配置备份还原"><img src="https://fpr.motaobox.com/404104383760372382" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="VSCode 配置备份还原"/></a><div class="content"><a class="title" href="/2021/12/14/vscode-setting-backup/" title="VSCode 配置备份还原">VSCode 配置备份还原</a><time datetime="2021-12-14T13:54:36.288Z" title="发表于 2021-12-14 21:54:36">2021-12-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/12/14/vscode-tips/" title="vscode Could not create temporary directory"><img src="https://fpr.motaobox.com/404114779895136908" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="vscode Could not create temporary directory"/></a><div class="content"><a class="title" href="/2021/12/14/vscode-tips/" title="vscode Could not create temporary directory">vscode Could not create temporary directory</a><time datetime="2021-12-14T13:54:36.288Z" title="发表于 2021-12-14 21:54:36">2021-12-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/12/14/sourcetree-error/" title="卸载souretree后导致git flow无法使用"><img src="https://fpr.motaobox.com/404105009257536597" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="卸载souretree后导致git flow无法使用"/></a><div class="content"><a class="title" href="/2021/12/14/sourcetree-error/" title="卸载souretree后导致git flow无法使用">卸载souretree后导致git flow无法使用</a><time datetime="2021-12-14T13:54:36.287Z" title="发表于 2021-12-14 21:54:36">2021-12-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/12/14/reflow-repaint/" title="reflow（重排） &amp;&amp; repaint（重绘）"><img src="https://fpr.motaobox.com/404107089011075929" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="reflow（重排） &amp;&amp; repaint（重绘）"/></a><div class="content"><a class="title" href="/2021/12/14/reflow-repaint/" title="reflow（重排） &amp;&amp; repaint（重绘）">reflow（重排） &amp;&amp; repaint（重绘）</a><time datetime="2021-12-14T13:54:36.286Z" title="发表于 2021-12-14 21:54:36">2021-12-14</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline"><i class="fas fa-folder-open"></i><span>分类</span></div><ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Swiper/"><span class="card-category-list-name">Swiper</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/chrome-devtool/"><span class="card-category-list-name">chrome-devtool</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/git/"><span class="card-category-list-name">git</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/javascript/"><span class="card-category-list-name">javascript</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%89%8D%E7%AB%AF/"><span class="card-category-list-name">前端</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%89%8D%E7%AB%AF%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B7%A5%E5%85%B7/"><span class="card-category-list-name">前端自动化工具</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/"><span class="card-category-list-name">开发工具</span><span class="card-category-list-count">4</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/"><span class="card-category-list-name">性能优化</span><span class="card-category-list-count">1</span></a></li>
+            <li class="card-category-list-item more is-center"><a class="card-category-list-link-more" href="/categories/">
+                <span>查看更多</span><i class="fas fa-angle-right"></i></a></li>
+            </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/css/" style="font-size: 1.1em; color: #999">css</a> <a href="/tags/javascript/" style="font-size: 1.5em; color: #99a9bf">javascript</a> <a href="/tags/sourcetree/" style="font-size: 1.1em; color: #999">sourcetree</a> <a href="/tags/vim/" style="font-size: 1.1em; color: #999">vim</a> <a href="/tags/vscode/" style="font-size: 1.3em; color: #99a1ac">vscode</a> <a href="/tags/vue/" style="font-size: 1.3em; color: #99a1ac">vue</a> <a href="/tags/vue-less-less-variables/" style="font-size: 1.1em; color: #999">vue less less-variables</a> <a href="/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/" style="font-size: 1.1em; color: #999">二叉树</a> <a href="/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/" style="font-size: 1.1em; color: #999">微信小程序</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/12/"><span class="card-archive-list-date">十二月 2021</span><span class="card-archive-list-count">6</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/05/"><span class="card-archive-list-date">五月 2021</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/04/"><span class="card-archive-list-date">四月 2021</span><span class="card-archive-list-count">4</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/02/"><span class="card-archive-list-date">二月 2021</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/01/"><span class="card-archive-list-date">一月 2021</span><span class="card-archive-list-count">5</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/08/"><span class="card-archive-list-date">八月 2020</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/01/"><span class="card-archive-list-date">一月 2020</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2019/11/"><span class="card-archive-list-date">十一月 2019</span><span class="card-archive-list-count">1</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">22</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2023-03-01T09:27:08.835Z"></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By Joe</div><div class="framework-info"><a target="_blank" rel="noopener" href="https://beian.miit.gov.cn/#/Integrated/index">粤ICP备17160384号</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div></div><hr/><div id="local-search-results"></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script>function subtitleType () {
+  if (true) { 
+    var typed = new Typed("#subtitle", {
+      strings: "你举世无双&#44;无人可以替代,You’re unique, nothing can replace you.".split(","),
+      startDelay: 300,
+      typeSpeed: 150,
+      loop: true,
+      backSpeed: 50
+    })
+  } else {
+    document.getElementById("subtitle").innerHTML = '你举世无双&#44;无人可以替代'
+  }
+}
+
+if (true) {
+  if (typeof Typed === 'function') {
+    subtitleType()
+  } else {
+    getScript('https://cdn.jsdelivr.net/npm/typed.js/lib/typed.min.js').then(subtitleType)
+  }
+} else {
+  subtitleType()
+}</script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script id="click-show-text" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/click-show-text.min.js" data-mobile="false" data-text="富强,民主,文明,和谐,自由,平等,公正,法治,爱国,敬业,诚信,友善" data-fontsize="15px" data-random="false" async="async"></script></div><script src="https://cdn.jsdelivr.net/npm/live2d-widget@^3.1.3/lib/L2Dwidget.min.js"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"https://cdn.jsdelivr.net/npm/live2d-widget-model-unitychan@1.0.5/assets/unitychan.model.json"},"display":{"superSample":2,"position":"left","width":200,"height":600,"hOffset":20,"vOffset":-90},"mobile":{"show":true,"scale":1},"react":{"opacityDefault":0.3,"opacityOnHover":0.3,"opacity":0.95},"log":false});</script></body></html>
