@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>hexo迎娶live2d看板娘</title>
+      <link href="2023/03/01/hexo-live2d/"/>
+      <url>2023/03/01/hexo-live2d/</url>
+      
+        <content type="html"><![CDATA[<p>眼尖的大佬已经发现了博客左下角有个看板娘对吧，怎么迎娶获取了，现在我们一起来吧，只需3步即可获得。o(<em>￣︶￣</em>)o</p><ol><li>安装依赖 <code>hexo-helper-live2d</code></li><li>修改 <code>_config.yml</code><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 增加配置项</span></span><br><span class="line"><span class="attr">live2d:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">scriptFrom:</span> <span class="string">jsdelivr</span> <span class="comment"># local</span></span><br><span class="line">  <span class="attr">pluginRootPath:</span> <span class="string">live2dw/</span></span><br><span class="line">  <span class="attr">pluginJsPath:</span> <span class="string">lib/</span></span><br><span class="line">  <span class="attr">pluginModelPath:</span> <span class="string">assets/</span></span><br><span class="line">  <span class="attr">tagMode:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">debug:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">model:</span></span><br><span class="line">    <span class="comment"># use: live2d-widget-model-hijiki # npm-module package name</span></span><br><span class="line">    <span class="comment"># use: wanko # 博客根目录/live2d_models/ 下的目录名</span></span><br><span class="line">    <span class="comment"># use: ./wives/wanko # 相对于博客根目录的路径</span></span><br><span class="line">    <span class="attr">use:</span> <span class="string">https://cdn.jsdelivr.net/npm/live2d-widget-model-unitychan@1.0.5/assets/unitychan.model.json</span></span><br><span class="line">    <span class="attr">scale:</span> <span class="number">1</span></span><br><span class="line">    <span class="attr">hHeadPos:</span> <span class="number">0.5</span></span><br><span class="line">    <span class="attr">vHeadPos:</span> <span class="number">0.618</span></span><br><span class="line">  <span class="attr">display:</span></span><br><span class="line">    <span class="attr">superSample:</span> <span class="number">2</span></span><br><span class="line">    <span class="attr">position:</span> <span class="string">left</span> <span class="comment"># right</span></span><br><span class="line">    <span class="attr">width:</span> <span class="number">200</span></span><br><span class="line">    <span class="attr">height:</span> <span class="number">600</span></span><br><span class="line">    <span class="attr">hOffset:</span> <span class="number">20</span></span><br><span class="line">    <span class="attr">vOffset:</span> <span class="number">-90</span></span><br><span class="line">  <span class="attr">mobile:</span></span><br><span class="line">    <span class="attr">show:</span> <span class="literal">true</span></span><br><span class="line">    <span class="attr">scale:</span> <span class="number">1</span></span><br><span class="line">  <span class="attr">react:</span></span><br><span class="line">    <span class="attr">opacityDefault:</span> <span class="number">0.3</span></span><br><span class="line">    <span class="attr">opacityOnHover:</span> <span class="number">0.3</span></span><br><span class="line">    <span class="attr">opacity:</span> <span class="number">0.95</span>          <span class="comment"># 模型透明度</span></span><br></pre></td></tr></table></figure></li><li>重新执行命令<code>hexo server</code></li></ol>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> hexo live2d </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>一键部署hexo静态博客到github pages</title>
       <link href="2023/03/01/hexo-deploy/"/>
       <url>2023/03/01/hexo-deploy/</url>
@@ -54,11 +73,11 @@
     
     
     <entry>
-      <title>vscode Could not create temporary directory</title>
-      <link href="2021/12/14/vscode-tips/"/>
-      <url>2021/12/14/vscode-tips/</url>
+      <title>VSCode 配置备份还原</title>
+      <link href="2021/12/14/vscode-setting-backup/"/>
+      <url>2021/12/14/vscode-setting-backup/</url>
       
-        <content type="html"><![CDATA[<h2 id="vscode-右下角显示-vscode-Could-not-create-temporary-directory-权限被拒绝"><a href="#vscode-右下角显示-vscode-Could-not-create-temporary-directory-权限被拒绝" class="headerlink" title="vscode 右下角显示 vscode Could not create temporary directory: 权限被拒绝"></a>vscode 右下角显示 vscode Could not create temporary directory: 权限被拒绝</h2><p>处理方式，命令行环境执行一下命令</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo <span class="built_in">chown</span> <span class="variable">$USER</span> ~/Library/Caches/com.microsoft.VSCode.ShipIt/</span><br></pre></td></tr></table></figure><p>重新启动后，更新即可～</p>]]></content>
+        <content type="html"><![CDATA[<h2 id="VSCode-配置备份还原"><a href="#VSCode-配置备份还原" class="headerlink" title="VSCode 配置备份还原"></a>VSCode 配置备份还原</h2><ol><li>安装 settings sync 插件</li></ol><ol start="2"><li><p>安装成功重载后 ctrl + shift + p (win) 打开控制面板 </p><ul><li><p>需要输入一个 github token</p></li><li><p>这时候去到自己的github 的setting里面的developer settings  点击生成token，输入一个token 描述</p></li><li><p>选择gist 这项并提交 就会得到一串token 此token 每个人都不同 需自行保管 这里就不透露了</p></li><li><p>回到vs code 输入我们刚才得到的token后 vs code就会让我们输入一个gist id</p></li><li><p>这里输入我的gist id  XXXd471f9947d35a438ca27578404547e （这样可以得到我的vs code 插件和配置） vs code 将开始配置 并安装插件</p></li><li><p>过程中 如果不放心 就可以再次运行此命令</p></li></ul></li></ol><p><strong>过程中 需要耐心等待下</strong></p><p>当所有配置拉取成功了 会有日志输出<br>用户设置里面也会有一个我的基础模板</p><p>GitHub Token:       XXX597599670bb04027d6a850f84e9ec5feadc19<br>GitHub Gist: XXXcda5cac81481eb6d71f2b9d7255d80f<br>GitHub Gist Type: Secret</p>]]></content>
       
       
       <categories>
@@ -79,11 +98,11 @@
     
     
     <entry>
-      <title>VSCode 配置备份还原</title>
-      <link href="2021/12/14/vscode-setting-backup/"/>
-      <url>2021/12/14/vscode-setting-backup/</url>
+      <title>vscode Could not create temporary directory</title>
+      <link href="2021/12/14/vscode-tips/"/>
+      <url>2021/12/14/vscode-tips/</url>
       
-        <content type="html"><![CDATA[<h2 id="VSCode-配置备份还原"><a href="#VSCode-配置备份还原" class="headerlink" title="VSCode 配置备份还原"></a>VSCode 配置备份还原</h2><ol><li>安装 settings sync 插件</li></ol><ol start="2"><li><p>安装成功重载后 ctrl + shift + p (win) 打开控制面板 </p><ul><li><p>需要输入一个 github token</p></li><li><p>这时候去到自己的github 的setting里面的developer settings  点击生成token，输入一个token 描述</p></li><li><p>选择gist 这项并提交 就会得到一串token 此token 每个人都不同 需自行保管 这里就不透露了</p></li><li><p>回到vs code 输入我们刚才得到的token后 vs code就会让我们输入一个gist id</p></li><li><p>这里输入我的gist id  XXXd471f9947d35a438ca27578404547e （这样可以得到我的vs code 插件和配置） vs code 将开始配置 并安装插件</p></li><li><p>过程中 如果不放心 就可以再次运行此命令</p></li></ul></li></ol><p><strong>过程中 需要耐心等待下</strong></p><p>当所有配置拉取成功了 会有日志输出<br>用户设置里面也会有一个我的基础模板</p><p>GitHub Token:       XXX597599670bb04027d6a850f84e9ec5feadc19<br>GitHub Gist: XXXcda5cac81481eb6d71f2b9d7255d80f<br>GitHub Gist Type: Secret</p>]]></content>
+        <content type="html"><![CDATA[<h2 id="vscode-右下角显示-vscode-Could-not-create-temporary-directory-权限被拒绝"><a href="#vscode-右下角显示-vscode-Could-not-create-temporary-directory-权限被拒绝" class="headerlink" title="vscode 右下角显示 vscode Could not create temporary directory: 权限被拒绝"></a>vscode 右下角显示 vscode Could not create temporary directory: 权限被拒绝</h2><p>处理方式，命令行环境执行一下命令</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo <span class="built_in">chown</span> <span class="variable">$USER</span> ~/Library/Caches/com.microsoft.VSCode.ShipIt/</span><br></pre></td></tr></table></figure><p>重新启动后，更新即可～</p>]]></content>
       
       
       <categories>
